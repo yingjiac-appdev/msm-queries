@@ -89,6 +89,7 @@ RUN BROWSER_MAJOR=$(google-chrome --version | sed 's/Google Chrome \([0-9]*\).*/
     echo "chromedriver version: $DRIVER_MAJOR" && \
     if [ $BROWSER_MAJOR != $DRIVER_MAJOR ]; then echo "VERSION MISMATCH"; exit 1; fi
 
+# Pre-install gems into /base-rails/gems/
 COPY Gemfile /base-rails/Gemfile
 COPY --chown=gitpod:gitpod Gemfile.lock /base-rails/Gemfile.lock
 RUN /bin/bash -l -c "gem install bundler:2.1.4"
