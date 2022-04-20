@@ -34,3 +34,5 @@ examples.txt
 yarn-debug.log*
 .yarn-integrity
 .theia/.ltici_apitoken.yml
+vendor/bundle/*
+!vendor/bundle/.keep

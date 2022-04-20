@@ -16,8 +16,7 @@ GIT
 
 GIT
   remote: https://github.com/firstdraft/web_git.git
-  revision: a2be64e762eb0d79a204ab8cf941e99c1b2a2a8d
-  branch: spring2020
+  revision: 934e081e566dc25e6510b4c8780330e7198b6e5e
   specs:
     web_git (0.1.0)
       actionview
@@ -144,7 +143,7 @@ GEM
     ffi (1.15.5-java)
     ffi (1.15.5-x64-mingw32)
     ffi (1.15.5-x86-mingw32)
-    git (1.10.2)
+    git (1.11.0)
       rchardet (~> 1.8)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -216,7 +215,7 @@ GEM
     racc (1.6.0)
     racc (1.6.0-java)
     rack (2.2.3)
-    rack-protection (2.1.0)
+    rack-protection (2.2.0)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -313,10 +312,10 @@ GEM
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
-    sinatra (2.1.0)
+    sinatra (2.2.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
-      rack-protection (= 2.1.0)
+      rack-protection (= 2.2.0)
       tilt (~> 2.0)
     spoon (0.0.6)
       ffi

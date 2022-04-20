@@ -1,11 +1,15 @@
 image: patrickmckernin/msmqueries22winter
 
 tasks:
-  - init: bin/setup
+  - before: |
+      cp -r /base-rails/gems/ruby vendor/bundle
+      bundle config set --local path 'vendor/bundle'
+      rails db:create db:migrate
+      rails db:seed
 ports:
   - port: 3000
     onOpen: open-preview
-  - port: 9515
+  - port: 9500-9999
     onOpen: ignore
 
 
