@@ -1,4 +1,4 @@
-image: patrickmckernin/msmqueries22winter
+image: jelaniwoods/appdev2022-msm-queries
 
 tasks:
   - before: |
