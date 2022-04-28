@@ -36,3 +36,7 @@ yarn-debug.log*
 .theia/.ltici_apitoken.yml
 vendor/bundle/*
 !vendor/bundle/.keep
+
+# Ignore the default SQLite database.
+# /db/*.sqlite3
+# /db/*.sqlite3-journal
