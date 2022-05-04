@@ -1,0 +1,112 @@
+<h1>
+  List of all movies
+</h1>
+
+<hr>
+<table border="1">
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Image
+    </th>
+
+    <th>
+      Title
+    </th>
+
+    <th>
+      Year
+    </th>
+
+    <th>
+      Director
+    </th>
+
+    <th>
+    </th>
+  </tr>
+<% @list_of_movies.each do |a_movie| %>
+  <tr>
+    <td>
+      <%= a_movie.id%>
+    </td>
+
+    <td>
+      <img src=<%= a_movie.image%> style="width:250px;">
+    </td>
+
+    <td>
+      <%= a_movie.title%>
+    </td>
+
+    <td>
+      <%= a_movie.year%>
+    </td>
+
+    <td>
+        <%= Director.where({ :id => a_movie.director_id}).at(0).name%>
+    </td>
+
+    <td>
+      <a href="/movies/<%= a_movie.id%>">
+        Show details
+      </a>
+    </td>
+  </tr>
+<% end %>
+</table>
+<hr>
+
+<h2>
+  Add a new movie
+  <small>(Building this form is not required. It's an optional stretch goal; but, you have the tools if you want to give it a try.)</small>
+</h2>
+
+<form action="/insert_movie">
+  <div>
+    <label for="title_box">
+      Title
+    </label>
+
+    <input type="text" id="title_box" name="query_title">
+  </div>
+
+  <div>
+    <label for="year_box">
+      Year
+    </label>
+
+    <input type="text" id="year_box" name="query_year">
+  </div>
+
+  <div>
+    <label for="duration_box">
+      Duration
+    </label>
+
+    <input type="text" id="duration_box" name="query_duration">
+  </div>
+
+  <div>
+    <label for="description_box">
+      Description
+    </label>
+
+    <textarea id="description_box" name="query_description" rows="3"></textarea>
+  </div>
+
+  <div>
+    <label for="image_box">
+      Image URL
+    </label>
+
+    <input type="text" id="image_box" name="query_image">
+  </div>
+
+  <div>
+    <label for="director_id_box">
+      Director
+    </label>
